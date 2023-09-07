@@ -1,0 +1,57 @@
+"""
+# This file defines the chatbot's domain, including the intents, entities, slots, and actions.
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - handle_inquiries
+  - make_booking
+  - check_flight_status
+  - answer_policy_questions
+
+entities:
+  - inquiry
+  - booking_info
+  - flight_number
+  - question
+
+slots:
+  inquiry:
+    type: text
+  booking_info:
+    type: text
+  flight_number:
+    type: text
+  question:
+    type: text
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+  utter_affirm:
+    - text: "Sure, I can do that."
+  utter_deny:
+    - text: "I'm sorry, I can't assist with that."
+  utter_handle_inquiries:
+    - text: "Here is the information you requested: {inquiry}"
+  utter_make_booking:
+    - text: "Your booking has been made. Here is your confirmation: {booking_info}"
+  utter_check_flight_status:
+    - text: "The status of flight {flight_number} is: {flight_status}"
+  utter_answer_policy_questions:
+    - text: "Here is the policy information you requested: {question}"
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_affirm
+  - utter_deny
+  - utter_handle_inquiries
+  - utter_make_booking
+  - utter_check_flight_status
+  - utter_answer_policy_questions
+"""
