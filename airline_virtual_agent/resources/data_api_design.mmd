@@ -1,0 +1,11 @@
+classDiagram
+    class VirtualAgent{
+        +str name
+        +str version
+        +str airline_systems
+        +__init__(name: str, version: str, airline_systems: str)
+        +handle_inquiries(inquiry: str): str
+        +make_booking(booking_info: dict): str
+        +check_flight_status(flight_number: str): str
+        +answer_policy_questions(question: str): str
+    }

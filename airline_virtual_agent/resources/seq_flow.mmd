@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant M as Main
+    participant VA as VirtualAgent
+    M->>VA: __init__("Airline Virtual Agent", "3.3.0", "Airline Systems")
+    M->>VA: handle_inquiries("What is your baggage policy?")
+    VA->>M: "Our baggage policy is..."
+    M->>VA: make_booking({"flight_number": "123", "passenger_name": "John Doe"})
+    VA->>M: "Booking successful. Confirmation number is 456."
+    M->>VA: check_flight_status("123")
+    VA->>M: "Flight 123 is on time."
+    M->>VA: answer_policy_questions("What is your cancellation policy?")
+    VA->>M: "Our cancellation policy is..."
